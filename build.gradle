@@ -46,15 +46,17 @@ subprojects {
       implementation 'org.springframework.boot:spring-boot-starter'
       //rest
       implementation "org.springframework.boot:spring-boot-starter-web"
-      //test
-      testImplementation 'org.springframework.boot:spring-boot-starter-test'
   
       developmentOnly("org.springframework.boot:spring-boot-devtools")
   
+      //test
+      //https://qiita.com/gumimin/items/f15eaede3e0e5b7a11a5
+      testImplementation ('org.springframework.boot:spring-boot-starter-test'){
+          exclude module: 'junit'
+      }
       //junit5
-      testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.1'
-      testImplementation 'org.junit.jupiter:junit-jupiter-params:5.4.1'//Parameterized Testを使う場合。
-      testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.1'
+      testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.2'
+      testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
       
       //assertJ
       testImplementation "org.assertj:assertj-core:3.11.1"
