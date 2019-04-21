@@ -3,7 +3,9 @@ HELP.md
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 *.class
-###改装にかかわらずbuildフォルダを無視
+
+#階層にかかわらずbuildフォルダを無視
+#https://hacknote.jp/archives/14431/
 *build/
 ### STS ###
 .apt_generated
